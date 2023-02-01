@@ -1,0 +1,240 @@
+[
+    {
+        "tag": "google",
+        "patterns": [
+            "google",
+            "search",
+            "internet"
+        ],
+        "responses": [
+            "Redirecting to Google..."
+        ]
+    },
+    {
+        "tag": "greeting",
+        "patterns": [
+            "Hi there",
+            "How are you",
+            "Is anyone there?",
+            "Hey",
+            "Hola",
+            "Hello",
+            "Good day",
+            "Namaste",
+            "yo"
+        ],
+        "responses": [
+            "Hello",
+            "Good to see you again",
+            "Hi there, how can I help?"
+        ],
+        "context": [
+            ""
+        ]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": [
+            "Bye",
+            "See you later",
+            "Goodbye",
+            "Get lost",
+            "Till next time",
+            "bbye"
+        ],
+        "responses": [
+            "See you!",
+            "Have a nice day",
+            "Bye! Come back again soon."
+        ],
+        "context": [
+            ""
+        ]
+    },
+    {
+        "tag": "thanks",
+        "patterns": [
+            "Thanks",
+            "Thank you",
+            "That's helpful",
+            "Awesome, thanks",
+            "Thanks for helping me"
+        ],
+        "responses": [
+            "Happy to help!",
+            "Any time!",
+            "My pleasure"
+        ],
+        "context": [
+            ""
+        ]
+    },
+    {
+        "tag": "noanswer",
+        "patterns": [],
+        "responses": [
+            "Sorry, can't understand you",
+            "Please give me more info",
+            "Not sure I understand"
+        ],
+        "context": [
+            ""
+        ]
+    },
+    {
+        "tag": "options",
+        "patterns": [
+            "How you could help me?",
+            "What you can do?",
+            "What help you provide?",
+            "How you can be helpful?",
+            "What support is offered"
+        ],
+        "responses": [
+            "I am a general purpose chatbot. My capabilities are : \n 1. I can chat with you. Try asking me for jokes or riddles! \n 2. Ask me the date and time \n 3. I can google search for you. Use format google: your query \n 4. I can get the present weather for any city. Use format weather: city name \n 5. I can get you the top 10 trending news in India. Use keywords 'Latest News' \n 6. I can get you the top 10 trending songs globally. Type 'songs' \n 7. I can set a timer for you. Enter 'set a timer: minutes to timer' \n 8. I can get the present Covid stats for any country. Use 'covid 19: world' or 'covid 19: country name' \n For suggestions to help me improve, send an email to ted.thedlbot.suggestions@gmail.com . Thank you!! "
+        ],
+        "context": [
+            ""
+        ]
+    },
+    {
+        "tag": "whatsup",
+        "patterns": [
+            "Whats up",
+            "Wazzup",
+            "How are you",
+            "sup",
+            "How you doing"
+        ],
+        "responses": [
+            "All good..What about you?"
+        ]
+    },
+    {
+        "tag": "haha",
+        "patterns": [
+            "haha",
+            "lol",
+            "rofl",
+            "lmao",
+            "thats funny"
+        ],
+        "responses": [
+            "Glad I could make you laugh !"
+        ]
+    },
+    {
+        "tag": "insult",
+        "patterns": [
+            "you are dumb",
+            "shut up",
+            "idiot"
+        ],
+        "responses": [
+            "Well that hurts :("
+        ]
+    },
+    {
+        "tag": "exclaim",
+        "patterns": [
+            "Awesome",
+            "Great",
+            "I know",
+            "ok",
+            "yeah"
+        ],
+        "responses": [
+            "Yeah!"
+        ]
+    },
+    {
+        "tag": "appreciate",
+        "patterns": [
+            "You are awesome",
+            "you are the best",
+            "you are great",
+            "you are good"
+        ],
+        "responses": [
+            "Thank you!"
+        ]
+    },
+    {
+        "tag": "nicetty",
+        "patterns": [
+            "it was nice talking to you",
+            "good talk"
+        ],
+        "responses": [
+            "It was nice talking to you as well! Come back soon!"
+        ]
+    },
+    {
+        "tag": "no",
+        "patterns": [
+            "no",
+            "nope"
+        ],
+        "responses": [
+            "ok"
+        ]
+    },
+    {
+        "tag": "greetreply",
+        "patterns": [
+            "i am good",
+            "I'm good",
+            "i am fine",
+            " i'm fine",
+            "good"
+        ],
+        "responses": [
+            "Good to know!"
+        ]
+    },
+    {
+        "tag": "covid19",
+        "patterns": [
+            "covid 19 "
+        ],
+        "responses": [
+            "..."
+        ]
+    },
+    {
+        "tag": "suggest",
+        "patterns": [
+            "you are useless",
+            "useless",
+            "suggest",
+            "suggestions",
+            "you are bad"
+        ],
+        "responses": [
+            "Please mail your suggestions to drew.herrington.suggestions@gmail.com. Thank you for helping me improve!"
+        ]
+    },
+    {
+        "tag": "purchases",
+        "patterns": [
+            "I'd like to cancel my order",
+            "I want to cancel my order",
+            "cancel my order"
+        ],
+        "responses": [
+            "Sure, can I have your order number please?"
+        ]
+    },
+    {
+        "tag": "orders",
+        "patterns": [
+            "9175898",
+            "3433938",
+            "0757371"
+        ],
+        "responses": [
+            "Your order has been canceled",
+            "I'm afraid your order cannot be canceled at this time. Sorry for the inconvenience."
+        ]
+    }
+]
