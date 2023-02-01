@@ -1,68 +1,29 @@
 <template>
     <div class="container mx-auto">
-        <div class="flex items-start justify-center max-w-6xl mx-auto">
-            <div class="w-4/5 marker:flex-1">
-                <div class="w-full border border-gray-200 rounded-xl bg-white my-4">
-                    <div class="relative w-full p-6 overflow-y-auto">
-                        <div class="space-y-3">
-                            <div v-for="(order, index) in orders" :key="index" class="flex items-start border border-gray-200 bg-gray-50 rounded-xl p-4">
-                                <div>
-                                    <div class="h-32 w-32 bg-gray-200 rounded-lg"></div>
-                                </div>
-
-                                <div class="ml-4">
-                                    <div class="mb-3">
-                                        <span class="text-base font-semibold text-gray-800">Order #{{ order.number }}</span>
-                                    </div>
-
-                                    <dl>
-                                        <div class="bg-transparent py-1 sm:grid sm:grid-cols-3 sm:gap-4">
-                                            <dt class="text-sm font-medium text-gray-500 sm:col-span-2">Item(s) Subtotal</dt>
-                                            <dd class="mt-1 text-sm text-gray-800 sm:mt-0">{{ order.subtotal }}</dd>
-                                        </div>
-
-                                        <div class="bg-transparent py-1 sm:grid sm:grid-cols-3 sm:gap-4">
-                                            <dt class="text-sm font-medium text-gray-500 sm:col-span-2">Postage and Packaging</dt>
-                                            <dd class="mt-1 text-sm text-gray-800 sm:mt-0">{{ order.postage }}</dd>
-                                        </div>
-
-                                        <div class="bg-transparent py-1 sm:grid sm:grid-cols-3 sm:gap-4">
-                                            <dt class="text-sm font-bold text-gray-900 sm:col-span-2">Total</dt>
-                                            <dd class="mt-1 text-sm font-bold text-gray-800 sm:mt-0">{{ order.total }}</dd>
-                                        </div>
-                                    </dl>
-                                </div>
-
-                                <div class="ml-4 flex flex-1 justify-end h-full">
-                                    <span :class="{ 'bg-red-100 text-red-700 border-red-200': order.status === 'Canceled' }" class="text-xs font-semibold bg-gray-100 border border-gray-200 rounded-full py-1 px-2">
-                                        {{ order.status }}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="flex-col items-center justify-center w-full">
+            <div class="mt-6 text-center">
+                <h2 class="text-gray-50 font-bold text-3xl">NextBot</h2>
             </div>
 
-            <div class="ml-6 w-2/5">
-                <div class="w-full border border-gray-200 rounded-xl bg-white my-4">
+            <div class="w-1/2 mx-auto">
+                <div class="w-full border border-gray-700 rounded-xl bg-gray-600 my-4">
                     <div class="relative w-full p-6 overflow-y-auto h-[40rem]">
                         <ul class="space-y-3">
                             <li v-for="(message, index) in messages" :key="index">
-                                <div v-if="message.user === 'bot'" class="relative mr-auto w-3/4 px-4 py-2 text-white bg-blue-500 rounded-xl shadow-sm">
+                                <div v-if="message.user === 'bot'" class="relative mr-auto w-1/4 px-4 py-2 text-white bg-gray-500 rounded-xl shadow-sm">
                                     <span class="block">{{ message.body }}</span>
                                 </div>
 
-                                <div v-else class="relative ml-auto w-3/4 px-4 py-2 text-gray-700 bg-gray-100 rounded-xl shadow-sm">
+                                <div v-else class="relative ml-auto w-1/4 px-4 py-2 text-gray-700 bg-gray-100 rounded-xl shadow-sm">
                                     <span class="block">{{ message.body }}</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
-                    <form @submit.prevent="postMessage" class="flex items-center justify-between w-full p-3 border-t border-gray-300">
+                    <form @submit.prevent="postMessage" class="flex items-center justify-between w-full p-3 border-t border-gray-700">
                         <input v-model="body" type="text" placeholder="Message"
-                        class="block w-full py-2 pl-4 mx-3 bg-gray-100 rounded-full outline-none focus:text-gray-700"
+                        class="block w-full py-2 pl-4 mx-3 bg-gray-500 rounded-full outline-none focus:text-gray-100"
                         name="message" required />
 
                         <button type="submit">
